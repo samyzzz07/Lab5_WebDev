@@ -1,0 +1,155 @@
+/* Styling for the Movies Watch List.
+   Use these class names in your JSX (className="..."), or rename them to match yours. */
+
+body {
+  margin: 0;
+  background-color: #eef2ff;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+.app {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.app-title {
+  margin: 0 0 16px 0;
+  font-size: 26px;
+}
+
+/* ---------- Add movie form ---------- */
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.add-form input,
+.add-form textarea {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #f9fafb;
+}
+
+.add-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.add-form > button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: #2f7cf6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-form > button:hover {
+  background-color: #1d63d4;
+}
+
+/* ---------- Movie list ---------- */
+.movie-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.movie-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.movie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.remove-btn {
+  background: none;
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #fee2e2;
+}
+
+/* ---------- Star rating ---------- */
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 10px 0 6px 0;
+}
+
+.star {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  filter: grayscale(1);   /* empty star = grey */
+  opacity: 0.4;
+}
+
+.star.filled {
+  filter: none;           /* filled star = yellow */
+  opacity: 1;
+}
+
+.star:hover {
+  transform: scale(1.15);
+}
+
+/* the "3 / 5" or emoji summary next to the stars */
+.star-count {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ---------- Review ---------- */
+.review {
+  margin: 6px 0 0 0;
+  padding: 10px 12px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 24px;
+}
